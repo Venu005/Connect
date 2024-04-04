@@ -55,7 +55,7 @@
 
 /* ==== clerk class override ===== */
 
-.cl-providerIcon__github{
+.cl-providerIcon__github {
   filter: invert(1);
 }
 .cl-userButtonPopoverActionButtonIcon {
@@ -112,4 +112,11 @@
     animation-timing-function: ease-in;
     width: 100%;
   }
+}
+.text1 {
+  font-family: var(--font-poppins);
+}
+.text-w-1{
+  font-family: var(--font-work-sans);
+  font-weight: 600;
 }

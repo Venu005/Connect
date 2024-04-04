@@ -1,7 +1,10 @@
+"use client";
 import MeetingTypeList from "@/components/MeetingTypeList";
+import { useUser } from "@clerk/nextjs";
 
-const page = () => {
+const Dashboardpage = () => {
   const now = new Date();
+  const { user } = useUser();
   const time = now.toLocaleTimeString("en-in", {
     hour: "2-digit",
     minute: "2-digit",
@@ -14,7 +17,7 @@ const page = () => {
       <div className="h-[300px] w-full rounded-[20px] bg-hero bg-cover">
         <div className="flex h-full flex-col justify-between max-md:px-5 max-md:py-8 lg:p-11">
           <h2 className="glassmorphism max-w-[270px] rounded py-2 text-center text-base  font-normal">
-            Meeting at 12
+            Hello,{`${user?.username}`}
           </h2>
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-extrabold lg:text-7xl">{time}</h1>
@@ -29,4 +32,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Dashboardpage;

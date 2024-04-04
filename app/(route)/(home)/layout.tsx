@@ -1,9 +1,17 @@
 import NavBar from "@/components/NavBar";
 import Sidebar from "@/components/Sidebar";
+import { Metadata } from "next";
 
 interface HomelayoutProps {
   children: React.ReactNode;
 }
+export const metadata: Metadata = {
+  title: "Connect - Inspired by Zoom",
+  description: "A video calling app.Talk to your friends and family seamlessly",
+  icons: {
+    icon: "/icons/logo.svg",
+  },
+};
 const Homelayout = ({ children }: HomelayoutProps) => {
   return (
     <main className="relative">
