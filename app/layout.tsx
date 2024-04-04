@@ -5,12 +5,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { ClerkProvider } from "@clerk/nextjs";
 import "@stream-io/video-react-sdk/dist/css/styles.css"; //important
 import "react-datepicker/dist/react-datepicker.css";
+
 const inter = Inter({ subsets: ["latin"] });
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-poppins"
+  variable: "--font-poppins",
 });
 const worksans = Work_Sans({
   subsets: ["latin"],
@@ -35,7 +36,7 @@ export default function RootLayout({
       appearance={{
         layout: {
           socialButtonsVariant: "iconButton",
-          logoImageUrl: "/icons/yoom-logo.svg", //TODO: change this
+          logoImageUrl: "/icons/logo.svg",
         },
         variables: {
           colorText: "#fff",
@@ -50,8 +51,10 @@ export default function RootLayout({
         <body
           className={`${inter.className} ${poppins.variable} ${worksans.variable} bg-dark-2`}
         >
-          {children}
           <Toaster />
+          {children}
+          {/* <SpeedInsights />
+          <Analytics /> */}
         </body>
       </html>
     </ClerkProvider>
