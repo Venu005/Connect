@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { ClerkProvider } from "@clerk/nextjs";
 import "@stream-io/video-react-sdk/dist/css/styles.css"; //important
 import "react-datepicker/dist/react-datepicker.css";
-
+import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 const poppins = Poppins({
@@ -53,8 +53,9 @@ export default function RootLayout({
         >
           <Toaster />
           {children}
-          {/* <SpeedInsights />
-          <Analytics /> */}
+          {/* <SpeedInsights /> */}
+
+          <Analytics />
         </body>
       </html>
     </ClerkProvider>
